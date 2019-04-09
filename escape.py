@@ -55,8 +55,14 @@ def draw_squares_until_escaped(n):
     with open("data_square", "wb") as f:
         pickle.dump(L, f)
 
+def draw_triangles(number):
+    t = turtle.Turtle()
+    for i in range(1, number):
+        t.forward(i*10)
+        t.right(120)
+
 if __name__ == '__main__':
     turtle.setworldcoordinates(-70,-70,70,70)
     draw_bag()
-    draw_squares_until_escaped(10)
+    draw_triangles(10)
     turtle.mainloop()
